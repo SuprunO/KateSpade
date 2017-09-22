@@ -8,10 +8,11 @@ public class UserData {
     public String Lastname = "Doe";
     public String EMail = "test@speroteck.com";
     public String Phonenumber = "+(44)567-56-65";
-    public String Address = "666Dundee Road";
-    public String City = "New york";
+    public String Address = "666 Dundee Road";
+ //   public String City = "New york";
     public String PostCode = "60062";
-    public String Password = "156423";
+    public String State = "IL - Illinois";
+
 
     //Credentials for paypage
     public String Country = "United States";

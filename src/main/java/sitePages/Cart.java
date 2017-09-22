@@ -14,7 +14,7 @@ public class Cart extends BasePage {
     private String PROCEEDTOCHECKOUT = ".//*[@id='cart-items-form']/fieldset/div[2]/div[2]/div[1]/div/fieldset/button";
 
     public void clickOnProceedToCheckoutButton() {
-        waiter(PROCEEDTOCHECKOUT);
+       // waiter(PROCEEDTOCHECKOUT);
         clickOnXpath(PROCEEDTOCHECKOUT);
     }
 

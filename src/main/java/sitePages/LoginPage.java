@@ -12,11 +12,10 @@ public class LoginPage extends BasePage {
     }
 
     //Locators
-    private String GUESTCHECKOUT = ".form-row.form-row-button>button";
+    private String GUESTCHECKOUT = ".//*[@id='primary']/div[1]/div[2]/div/div/form/fieldset/div/button";
 
     public void clickOnGuestCheckoutButton() {
-        waiter(GUESTCHECKOUT);
-        clickOn(GUESTCHECKOUT);
+        clickOnXpath(GUESTCHECKOUT);
     }
 
 

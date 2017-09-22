@@ -48,6 +48,7 @@ public class Checkout {
         cart.clickOnProceedToCheckoutButton();
         loginPage.clickOnGuestCheckoutButton();
         shipping.inputUserCredentials(userData);
+        shipping.clickOnContinueToPaymentButton();
 
 
 
