@@ -7,6 +7,7 @@ import siteElements.MiniBag;
 import sitePages.Cart;
 import sitePages.LoginPage;
 import sitePages.PDP;
+import sitePages.Shipping;
 
 import static Base.BasePage.SiteURL;
 
@@ -20,19 +21,23 @@ public class Checkout {
     Cart cart;
     LoginPage loginPage;
     UserData userData;
+    Shipping shipping;
 
 
     @BeforeTest
     public void StartUp() {
         System.setProperty("webdriver.gecko.driver", "C://gecko/geckodriver.exe");
         driver = new FirefoxDriver();
-        userData = new UserData();
+
         driver.get(SiteURL + "/products/crawford-street-leopard-print-shellie/PXRU7990.html");
         driver.navigate().refresh();
         purchaseProduct = new PDP(driver);
+        driver.manage().window().maximize();
         miniBag = new MiniBag(driver);
         cart = new Cart(driver);
         loginPage = new LoginPage(driver);
+        shipping = new Shipping(driver);
+        userData = new UserData();
 
     }
 
@@ -42,10 +47,7 @@ public class Checkout {
         miniBag.clickOnViewBagCheckoutButton();
         cart.clickOnProceedToCheckoutButton();
         loginPage.clickOnGuestCheckoutButton();
-
-
-
-
+        shipping.inputUserCredentials(userData);
 
 
 
